@@ -5,10 +5,10 @@ import { FaUserFriends } from "react-icons/fa";
 
 const Sidebar = () => {
     return (
-        <div className="Sidebar">
+        <div className="Sidebar bg-success">
             <ul>
                 <li>
-                    <NavLink to="/" className='text-dark me-2'><FaHome/> Inicio</NavLink>
+                    <NavLink to="/" className='text-dark me-2 '><FaHome/> Inicio</NavLink>
                 </li>
 
                 <li>

@@ -7,10 +7,7 @@ function ProductosList() {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch(
-        "https://digitaldrinks.onrender.com/api/products",
-        { mode: "cors" }
-      );
+      const response = await fetch("https://digitaldrinks.onrender.com/api/products",{ mode: "cors" });
       const data = await response.json();
       setLoading(false);
       setProductos(data.data);

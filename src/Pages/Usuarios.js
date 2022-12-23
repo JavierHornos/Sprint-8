@@ -11,6 +11,8 @@ const Usuarios = () => {
         const data = await response.json()
         console.log(data)
         setUsers(data.data)
+        
+        
     }
 
     useEffect ( () => {
@@ -19,7 +21,7 @@ const Usuarios = () => {
     
     return (
         <div className='container-fluid' >
-           <table className='table table-striped table-hover mt-5 shadow-lg'>
+           <table className='table size=sm table-striped table-hover mt-6 shadow-lg responsive="xl"'>
             <thead>
                 <tr className='bg-curso text-red'>
                     <th>Nombre</th>
@@ -33,14 +35,15 @@ const Usuarios = () => {
 
             <tbody>
                 { users.map( (user) => ( 
-                <tr key={user.id}>
+                <tr key={user.Id}>
 
                     <td>{user.Nombre}</td>
                     <td>{user.Apellido}</td>
                     <td>{user.Email}</td>
                     <td>{user.Direccion}</td>
-                    <img src={user.Imagen} alt={user.Nombre}/>
+                    <td><img src={user.Imagen}/></td>
                     
+                                
                 </tr>
              ))}
             </tbody>
